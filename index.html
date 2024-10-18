@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>GLASSXTREM</title>
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: black;
+    color: white;
+}
+
+header {
+    position: relative;
+    margin: 20px auto;
+    max-width: 1000px;
+    height: 120px;
+    padding: 0 20px;
+}
+
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    animation: resplandor 2s infinite alternate;
+}
+
+@keyframes resplandor {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 20px white, 0 0 30px rgb(255, 64, 129); }
+}
+
+header img {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.redes {
+    position: absolute;
+    top: 42px;
+    right: 30px;
+}
+
+.redes a {
+    width: 42px;
+    height: 42px;
+    background: white;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 42px;
+    color: black;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#buscar {
+    position: absolute;
+    top: 50px;
+    left: calc(55% - 75px);
+    width: 150px; 
+    padding: 5px;
+}
+
+nav {
+    margin: auto;
+    max-width: 1000px;
+    height: 48px;
+    padding: 0 20px;
+}
+
+.botones {
+    float: left;
+    width: calc(100% / 5 - 8px);
+    margin: 0 2px;
+    height: 48px;
+    background: rgb(255, 255, 255);
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    animation: salto 2s infinite;
+}
+
+.botones:hover {
+    background: rgb(146, 0, 175);
+}
+
+@keyframes salto {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#top {
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+#top ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#top ul li {
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+}
+
+#top ul li img {
+    border-radius: 100%;
+    height: 100px;
+}
+
+section {
+    margin: auto;
+    max-width: 1000px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    flex: 2 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+article h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+article p img {
+    margin-bottom: 20px;
+    max-width: 40%;
+    height: auto;
+    animation: zoom 5s infinite;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article p b {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+@keyframes zoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.8); }
+}
+
+footer {
+    margin: 20px auto;
+    max-width: 1000px;
+    height: 70px;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 70px;
+    color: white;
+}
+
+aside#izq {
+    margin-top: 20px;
+    flex: 1 1 100%;
+}
+
+aside#izq ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside#izq li {
+    background: rgb(255, 255, 255);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: calc(25% - 10px);
+    animation: salto 2s infinite;
+}
+
+aside#izq li:hover {
+    background: rgb(146, 0, 175);
+}
+
+#formcontacto {
+    margin: 20px;
+    background: #f5f5f5;
+    padding: 20px;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .botones { width: 100%; margin: 5px 0; }
+    #top ul li { flex: 1 1 100%; }
+    section { flex-direction: column; }
+    aside#izq ul { flex-direction: column; }
+    aside#izq li { width: 100%; }
+    article { flex: 1 1 100%; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Inicia Cabezote -->
+<header>
+    <img src="/logo.jpeg" alt="Logo">
+    <div id="logo">GLASSXTREM</div>
+    <input type="text" id="buscar" placeholder="Buscar productos..." style="position:absolute; top: 50px; left: calc(55% - 75px); width: 150px; padding: 5px;">
+    <div class="redes">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</header>
+<!-- Cierra Cabezote -->
+
+<!-- Inicia Barra de Navegación -->
+<nav>
+    <ul>
+        <li class="botones"><a href="#">Inicio</a></li>
+        <li class="botones"><a href="#">Servicios</a></li>
+        <li class="botones"><a href="#">Productos</a></li>
+        <li class="botones"><a href="#">Nosotros</a></li>
+        <li class="botones" id="contactoenlace"><a href="#formcontacto">Contacto</a></li>
+    </ul>
+</nav>
+<!-- Cierra Barra de Navegación -->
+
+<!-- Inicia parte Superior -->
+<div id="top">
+    <ul>
+        <li>
+            <img src="adpt.jpeg" alt="Ventanas">
+            <h1>Adaptabilidad</h1>
+            <p>Se ajusta a tus necesidades.</p>
+        </li>
+        <li>
+            <img src="uv.jpeg" alt="Protección">
+            <h1>Protección UV</h1>
+            <p>Filtros solares personalizables.</p>
+        </li>
+        <li>
+            <img src="auto.jpeg" alt="Automatización">
+            <h1>Automatización</h1>
+            <p>Apertura, cierre y limpieza automáticos.</p>
+        </li>
+    </ul>
+</div>
+<!-- Cierra parte Superior -->
+
+<!-- Inicia Sección -->
+<section>
+    <article>
+        <p>
+            <img src="foto.jpeg" alt="Ventana tecnológica">
+            <b>Se trata de un ventanal tecnológico capaz de auto replegarse, ofrecer protección UV y un mecanismo de limpieza. El objetivo es ofrecer un elemento que se adapte a distintos escenarios de acuerdo con la necesidad del cliente. El cliente podrá tener una vida más cómoda, saludable y eficiente.</b>
+        </p>
+    </article>
+
+    <aside id="izq">
+        <ul>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Beneficios</a></li>
+            <li><a href="#">Tecnología</a></li>
+        </ul>
+    </aside>
+</section>
+<!-- Cierra Sección -->
+
+<!-- Formulario de Contacto -->
+<div id="formcontacto">
+    <h2>Contacto</h2>
+    <form>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<!-- Inicia Pie de Página -->
+<footer>
+    &copy; Todos los derechos reservados - GLASSXTREM
+</footer>
+<!-- Cierra Pie de Página -->
+
+<script>
+document.querySelectorAll('.botones').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Has hecho clic en ' + button.innerText);
+    });
+});
+
+document.getElementById('contactoenlace').addEventListener('click', () => {
+    document.getElementById('formcontacto').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('buscar').addEventListener('input', function() {
+    alert('Buscando productos relacionados con: ' + this.value);
+});
+</script>
+
+</body>
+</html>
+
+
